@@ -1,3 +1,236 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" href="">
+        <meta name="viewport" content = "width = device-width, initial-scale=1.0" >
+       <style>
+            :root{
+                --set-background-color-main:#00e1e9;
+                --set-background-color-head:orange;
+                --set-font-size-paragraph:1.3rem;
+                --set-font-family:"Times New Roman","serif";
+               
 
-<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, iure.</h1>
-<p>giuewgfuegefuiwgfeufwbejbmebwbuiegfeuwfuefguiewfewef</p
+            }
+            *{
+                padding:0px;
+                margin:0px;
+                box-sizing:border-box;
+            }
+            body{
+                width:100%;
+                height:100vh;
+                font-family:var(--set-font-family);
+                font-size:var(--set-font-size-paragraph);
+            }
+
+            /*position*/
+            .grid{
+                display:grid;
+                width:100%;
+                height:100vh;
+                grid-template-columns:1fr minmax(60%,70%) 1fr;
+                grid-template-rows: 1fr minmax(70%,80%) 0.5fr;
+            }
+
+            .caja1{
+                grid-column-start:1;
+                grid-column-end:4;
+            }
+            .caja5{
+                grid-column-start:1;
+                grid-column-end:4;
+            }
+        
+            /*estilos*/
+
+            
+            h1{
+                font-size:4rem;
+            }
+            h3{
+                font-size:3.5rem;
+            }
+            h4{
+                font-size:3rem;
+            }
+            .caja1{
+                display:flex;
+                align-items: center;
+                padding-left:20px;
+                background-color:var(--set-background-color-head);
+            }
+            .caja2{
+                margin-left:10px;
+                padding:20px;
+            }
+            .caja2 ul{
+                list-style-type:none;
+                padding:0px;
+                margin:0px;
+            }
+            .caja2 li{
+                margin-bottom:10px;
+                padding:10px;
+                background-color:var(--set-background-color-main);
+                font-weight:bold;
+                text-transform:capitalize;
+                font-size:1.8rem;
+                transition:background-color 500ms ease-out 200ms;
+            }
+            .caja2 li:hover{
+                background-color:purple;
+                color:white;
+            }
+            .caja3{
+                padding:10px 10px 10px 20px;
+                text-align:justify;
+                margin-right:10px;
+            }
+            .caja4{
+                display:flex;
+                flex-wrap:wrap;
+                justify-content: center;
+                align-content:space-around;
+                text-align:center;
+                padding:30px 10px;
+                background-color:var(--set-background-color-main);
+                text-transform:capitalize;
+                margin:10px 0px;
+            }
+            .caja5{
+                display:flex;
+                justify-content: center;
+                align-items:center;
+                font-style:oblique;
+                background-color:var(--set-background-color-head);
+                
+            }
+            /*Querys*/
+
+            @media screen and (max-width:1300px){
+                :root{
+                --set-background-color-main:#00e1e9;
+                --set-background-color-head:orange;
+                --set-font-size-paragraph:1.2rem;
+                --set-font-family:"Times New Roman","serif";
+
+                }
+                h1{
+                    font-size:3rem;
+                }
+                h3{
+                    font-size:2rem
+                }
+                h4{
+                    font-size:1.5rem;
+                }
+                .grid{
+                grid-template-columns:1.5fr minmax(60%,70%) 1fr;
+                  grid-template-rows:1fr minmax(40%,45%) minmax(30%, 40%) 0.5fr;;  
+                }
+                .caja2{
+                    padding:10px 10px;
+                    
+                }
+                .caja2 li{
+                    font-size:1.2rem;
+                    
+                }
+                .caja3{
+                    grid-column-start:2;
+                    grid-column-end:4;
+                }
+                .caja4{
+                    margin:0px;
+                    grid-row-start:3;
+                    grid-column-start:1;
+                    grid-column-end:4;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction:column;
+                    flex-wrap:nowrap;
+                    padding:40px;
+                    
+                }
+            }
+
+            @media screen and (max-width:900px){
+                .grid{
+                    display:flex;
+                    height:auto;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction:column;
+                    max-width:100%;
+                }
+                .caja1 ,.caja2,.caja2 ul,.caja2 li, .caja3, .caja4,.caja5{
+                    display:flex;   
+                    width:100%;
+                   flex-direction: column;
+                   justify-content: center;
+                   align-items: center;
+                    
+                }
+                .caja4 h4{
+                    margin-bottom:10px;
+                    margin-top:10px;
+                }
+               
+            }
+
+            @media screen and (min-width:1700px){
+                    body{
+                        
+                        height:100vh;
+                        display:flex;
+                        justify-content: center;
+                        align-items: center;
+                        
+                    }
+                    .grid{
+                        display:grid;
+                        max-width:1900px;
+                        max-height:900px;
+                       
+                    }
+                }
+       </style>
+    </head>
+
+    <body>
+
+       <div class="grid">
+
+        <div class="caja1 q">
+            <h1>Tokio City</h1>
+        </div>
+        <div class="caja2 q">
+            <ul>
+                <li>The city</li>
+                <li>the fly</li>
+                <li>the food</li>
+                <li>The clime</li>
+            </ul>
+        </div>
+        <div class="caja3 q">
+            <h3>The city</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium et impedit quam aliquid error temporibus dolor quia provident consequuntur officia inventore libero nulla necessitatibus animi repellat accusamus neque ab, ad vitae voluptatum minus? Distinctio autem ut quibusdam earum facere? Laboriosam nemo ipsa a iste hic illum exercitationem asperiores et libero?</p>
+        </div>
+        <div class="caja4 q">
+            <h4>who?</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, blanditiis cumque?</p>
+            <h4>what</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi esse aspernatur accusamus!</p>
+            <h4>where</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum hic dignissimos eligendi soluta!</p>
+        </div>
+        <div class="caja5 q">
+            <p>Derechos Reservados &copy; 2010-2022 www.index.com</p>
+        </div>
+       </div>
+
+    </body>
+</html>
+
